@@ -1,3 +1,4 @@
+alert('hello Mr. Achu, i hope you are well now click ok to continue')
 const panels = document.querySelectorAll('.panel')
 
 panels.forEach(function (panel) {
