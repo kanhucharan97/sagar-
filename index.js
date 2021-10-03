@@ -1,20 +1,14 @@
-alert('hello Dr. Sagar welcome to your page press ok to continue')
-const boxes = document.querySelectorAll('.box')
+const panels = document.querySelectorAll('.panel')
 
-window.addEventListener('scroll', checkboxes)
+panels.forEach(function (panel) {
+  panel.addEventListener('click', function () {
+    removeClassList()
+    panel.classList.add('active')
+  })
+})
 
-checkboxes()
-
-function checkboxes() {
-  const triggerBottom = (window.innerHeight / 5) * 4
-
-  boxes.forEach((box) => {
-    const boxTop = box.getBoundingClientRect().top
-
-    if (boxTop < triggerBottom) {
-      box.classList.add('show')
-    } else {
-      box.classList.remove('show')
-    }
+function removeClassList() {
+  panels.forEach(function (panel) {
+    panel.classList.remove('active')
   })
 }
